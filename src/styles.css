@@ -2,9 +2,14 @@
 .carousel-height {
   height: 100vh;
 }
-
+.page-height {
+  height: 100vh;
+}
 .f-48 {
   font-size: 48px;
+}
+.f-40 {
+  font-size: 40px;
 }
 .f-22 {
   font-size: 22px;
@@ -19,14 +24,49 @@
   color: #ffcf00;
 }
 
+.carousel-icon {
+  border-radius: 50%;
+  width: 13px !important;
+  height: 13px !important;
+  background-color: #ffcf00 !important;
+}
+
+/* This is for bounce down */
+
+.bounce-in-down {
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: bounce;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  30% {
+    transform: translateY(30px);
+  }
+  60% {
+    transform: translateY(18px);
+  }
+  90% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* bounce down */
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .carousel-height {
-    height: calc(100vh - 72.5px);
+    height: calc(100vh - 52.5px);
   }
 }
 
 @media only screen and (min-width: 30px) and (max-width: 767px) {
   .carousel-height {
-    height: calc(100vh - 72.5px);
+    height: calc(100vh - 52.5px);
   }
 }

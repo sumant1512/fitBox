@@ -1,3 +1,25 @@
+/* snappy scroll code start */
+.snappy {
+  overflow: auto;
+}
+
+.snappy.y {
+  width: 100%;
+  height: 100vh;
+}
+.y.mandatory-scroll-snapping {
+  scroll-snap-type: y mandatory;
+}
+
+.y.proximity-scroll-snapping {
+  scroll-snap-type: y proximity;
+}
+
+.snappy > div {
+  scroll-snap-align: center;
+}
+/* snappy scroll code end */
+
 video {
   width: 65%;
   height: auto;
