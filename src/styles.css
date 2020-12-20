@@ -13,8 +13,20 @@
   margin-top: 80px;
 }
 .bg-light-gray {
-  background-color: #2B2B00;
+  background-color: #2b2b00;
 }
 .yellow {
   color: #ffcf00;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .carousel-height {
+    height: calc(100vh - 72.5px);
+  }
+}
+
+@media only screen and (min-width: 30px) and (max-width: 767px) {
+  .carousel-height {
+    height: calc(100vh - 72.5px);
+  }
 }
