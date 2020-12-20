@@ -14,14 +14,41 @@
 .f-22 {
   font-size: 22px;
 }
+.top-250 {
+  top: 250px;
+}
+.fit-number {
+  font-family: system-ui;
+  font-size: 64px;
+}
+.text-stroke {
+  color: transparent;
+  -webkit-text-stroke: 3px #e3c133;
+}
+.fit-pay-image {
+  border-top: 20px solid #362b00;
+  height: 368px;
+}
 .mt-80 {
   margin-top: 80px;
+}
+.mt-15-vh {
+  margin-top: 20vh;
 }
 .bg-light-gray {
   background-color: #2b2b00;
 }
+.bg-dark-gray {
+  background-color: #292929;
+}
 .yellow {
   color: #ffcf00;
+}
+.light-yellow {
+  color: #e3c133;
+}
+.fade-yellow{
+  color: #FBD530;
 }
 
 .carousel-icon {

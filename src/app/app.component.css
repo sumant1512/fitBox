@@ -23,6 +23,7 @@
 video {
   width: 65%;
   height: auto;
+  box-shadow: 0 0 8px 2px #E6DE0096;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -35,6 +36,6 @@ video {
 @media only screen and (min-width: 30px) and (max-width: 767px) {
   video {
     width: 100%;
-    height: 169px;
+    height: 305px;
   }
 }
