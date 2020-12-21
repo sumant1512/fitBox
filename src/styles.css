@@ -32,6 +32,10 @@
 .mt-80 {
   margin-top: 80px;
 }
+
+.btm-border-1px{
+  border-bottom: 1px solid white;
+}
 .mt-15-vh {
   margin-top: 20vh;
 }
