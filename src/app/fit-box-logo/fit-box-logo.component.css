@@ -1,0 +1,20 @@
+.top-line {
+  display: block;
+  height: 1px;
+  border-top: 2px solid white;
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+
+.bottom-line {
+  display: block;
+  height: 1px;
+  border-top: 2px solid white;
+  margin-top: 100px;
+}
+
+.logo-sub-content {
+  font-size: 18px;
+  float: right;
+  border-bottom: 1px solid white;
+}

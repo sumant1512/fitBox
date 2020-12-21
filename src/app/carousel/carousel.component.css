@@ -15,6 +15,31 @@
   color: black;
 }
 
+.bg-1{
+  background-image: url("../../assets/carousel/BannerImage1.png");
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+.bg-2{
+  background-image: url("../../assets/carousel/BannerImage2.png");
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+.bg-3{
+  background-image: url("../../assets/carousel/BannerImage3.png");
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+.bg-4{
+  background-image: url("../../assets/carousel/BannerImage4.png");
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
 .start-now {
   position: absolute;
   bottom: 200px;
