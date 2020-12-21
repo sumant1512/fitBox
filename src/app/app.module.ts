@@ -18,6 +18,10 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { FitBoxPlayStoreComponent } from './fit-box-play-store/fit-box-play-store.component';
 import { FaqComponent } from './faq/faq.component';
 import { ContactInfoComponent } from './contact-info/contact-info.component';
+import { MenuTwoComponent } from './menu-two/menu-two.component';
+import { MenuThreeComponent } from './menu-three/menu-three.component';
+import { MenuFourComponent } from './menu-four/menu-four.component';
+import { MenuOneComponent } from './menu-one/menu-one.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +41,10 @@ import { ContactInfoComponent } from './contact-info/contact-info.component';
     FitBoxPlayStoreComponent,
     FaqComponent,
     ContactInfoComponent,
+    MenuTwoComponent,
+    MenuThreeComponent,
+    MenuFourComponent,
+    MenuOneComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
