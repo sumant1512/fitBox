@@ -61,6 +61,13 @@
   height: 13px !important;
   background-color: #ffcf00 !important;
 }
+
+.price-1 {
+  height: 617px;
+}
+.price-boder {
+  border: 3px solid #fbd530;
+}
 .bottom-border {
   border-bottom: 3px solid #bababa;
 }
