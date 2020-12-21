@@ -51,10 +51,17 @@
 .light-yellow {
   color: #e3c133;
 }
+html {
+  scroll-behavior: smooth;
+}
 .fade-yellow {
   color: #fbd530;
 }
-
+.bottom-line {
+  display: block;
+  height: 1px;
+  border-top: 2px solid white;
+}
 .carousel-icon {
   border-radius: 50%;
   width: 13px !important;

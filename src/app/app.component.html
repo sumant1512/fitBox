@@ -1,68 +1,58 @@
-<div class="snappy y mandatory-scroll-snapping">
-  <div>
-    <app-carousel></app-carousel>
+<div>
+  <!-- landing page -->
+  <div id="carousel">
+    <app-carousel (scrollPage)="scrollToPage($event)"></app-carousel>
   </div>
+  <!-- landing page end -->
+
   <!-- Why Fitbox -->
-  <div>
-    <app-why-fit-box></app-why-fit-box>
+  <div id="whyfitbox">
+    <app-why-fit-box (scrollPage)="scrollToPage($event)"></app-why-fit-box>
   </div>
   <!-- why fitbox ended -->
   <!-- fit freedom  -->
-  <div><app-fit-freedom></app-fit-freedom></div>
+  <div id="fitfreedom">
+    <app-fit-freedom (scrollPage)="scrollToPage($event)"></app-fit-freedom>
+  </div>
   <!-- fit freedom end -->
   <!-- fit flow -->
-  <div>
-    <app-fit-flow></app-fit-flow>
+  <div id="fitfflow">
+    <app-fit-flow (scrollPage)="scrollToPage($event)"></app-fit-flow>
   </div>
   <!-- fit flow end -->
   <!-- fit smile -->
-  <div>
-    <app-fit-smile></app-fit-smile>
+  <div id="fitsmile">
+    <app-fit-smile (scrollPage)="scrollToPage($event)"></app-fit-smile>
   </div>
   <!-- fit smile end -->
   <!-- fit touch -->
-  <div>
-    <app-fit-touch></app-fit-touch>
+  <div id="fittouch">
+    <app-fit-touch (scrollPage)="scrollToPage($event)"></app-fit-touch>
   </div>
   <!-- fit touch end -->
   <!-- fit box logo -->
-  <div>
+  <div id="fitboxlogo">
     <app-fit-box-logo></app-fit-box-logo>
   </div>
   <!-- fit box logo end -->
   <!-- fit box solving problems -->
-  <div>
+  <div id="fitboxsolvingproblems">
     <app-fit-box-solving-problems></app-fit-box-solving-problems>
   </div>
   <!-- fit box solving problems end -->
   <!-- fit covid ready -->
-  <div>
-    <app-fit-box-covid-ready></app-fit-box-covid-ready>
+  <div id="fitboxcovidready">
+    <app-fit-box-covid-ready
+      (scrollPage)="scrollToPage($event)"
+    ></app-fit-box-covid-ready>
   </div>
   <!-- fit covid ready end -->
-  <!-- menu one card -->
-  <div>
+  <!-- fit menu card -->
+  <div id="fitmenu">
     <app-menu-one></app-menu-one>
-  </div>
-  <!-- menu one card end-->
-  <!-- menu two card -->
-  <div>
     <app-menu-two></app-menu-two>
-  </div>
-  <!-- menu two card end-->
-  <!-- menu three card -->
-  <div>
     <app-menu-three></app-menu-three>
-  </div>
-  <!-- menu three card end-->
-  <!-- menu four card -->
-  <div>
     <app-menu-four></app-menu-four>
   </div>
-  <!-- menu four card end-->
-  <!-- pricing card -->
-  <div>
-    <app-pricing></app-pricing>
-  </div>
-  <!-- pricing card end-->
+  <!-- fit menu card end-->
 </div>

@@ -4,6 +4,3 @@
 .price-boder {
   border: 3px solid #fbd530;
 }
-.snap-end {
-  scroll-snap-align: none;
-}
