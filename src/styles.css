@@ -5,8 +5,8 @@
 .page-height {
   height: 100vh;
 }
-.f-48 {
-  font-size: 48px;
+.f-36 {
+  font-size: 36px;
 }
 .f-40 {
   font-size: 40px;
@@ -33,7 +33,7 @@
   margin-top: 80px;
 }
 
-.btm-border-1px{
+.btm-border-1px {
   border-bottom: 1px solid white;
 }
 .mt-15-vh {
@@ -51,8 +51,8 @@
 .light-yellow {
   color: #e3c133;
 }
-.fade-yellow{
-  color: #FBD530;
+.fade-yellow {
+  color: #fbd530;
 }
 
 .carousel-icon {
@@ -61,8 +61,8 @@
   height: 13px !important;
   background-color: #ffcf00 !important;
 }
-.bottom-border{
-  border-bottom: 3px solid #0000B1;
+.bottom-border {
+  border-bottom: 3px solid #bababa;
 }
 /* This is for bounce down */
 
