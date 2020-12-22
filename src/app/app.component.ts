@@ -24,6 +24,8 @@ export class AppComponent implements OnInit {
   ];
   selectedIndex = 0;
   selectedPage = this.pages[this.selectedIndex];
+  isTouchActive = true;
+  isHorizontalScrollActive = false;
   constructor(private viewPortScroller: ViewportScroller) {}
 
   ngOnInit() {}
@@ -45,7 +47,7 @@ export class AppComponent implements OnInit {
       let deltaTime = event.timeStamp - this.defaultTouch.time;
 
       // simulte a swipe -> less than 500 ms and more than 60 px
-      if (deltaTime < 2000) {
+      if (deltaTime < 2000 && this.isTouchActive) {
         if (Math.abs(deltaY)) {
           // delta y is at least 60 pixels
           if (deltaY > 0) {
@@ -64,6 +66,17 @@ export class AppComponent implements OnInit {
         }
       }
     }
+  }
+
+  @HostListener("window:scroll", [])
+  onWindowScroll() {
+    if (window.pageYOffset > 6500) {
+      this.isTouchActive = false;
+      this.isHorizontalScrollActive = true;
+    } else {
+      this.isTouchActive = true;
+    }
+    //we'll do some stuff here when the window is scrolled
   }
 
   scrollToPage(selectedPage: string) {

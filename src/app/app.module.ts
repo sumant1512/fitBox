@@ -19,6 +19,11 @@ import { ContactInfoComponent } from "./contact-info/contact-info.component";
 import { FitMenuComponent } from "./fit-menu/fit-menu.component";
 import { MDBBootstrapModule } from "angular-bootstrap-md";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { GalleryComponent } from './gallery/gallery.component';
+import { ReasonOneComponent } from './reason-one/reason-one.component';
+import { ReasonTwoComponent } from './reason-two/reason-two.component';
+import { ReasonThreeComponent } from './reason-three/reason-three.component';
+import { ReasonFourComponent } from './reason-four/reason-four.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +42,11 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     FaqComponent,
     ContactInfoComponent,
     FitMenuComponent,
+    GalleryComponent,
+    ReasonOneComponent,
+    ReasonTwoComponent,
+    ReasonThreeComponent,
+    ReasonFourComponent,
   ],
   imports: [
     BrowserModule,
