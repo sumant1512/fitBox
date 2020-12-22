@@ -1,11 +1,3 @@
-.fit-head {
-  color: #ffd00f;
-}
-button {
-  background-color: #272727;
-  box-shadow: 0 0px 3px 0px white;
-}
-
 ::placeholder {
   color: white;
 }
