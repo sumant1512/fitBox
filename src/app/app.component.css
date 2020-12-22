@@ -1,5 +1,5 @@
 /* snappy scroll code start */
-.snappy {
+/* .snappy {
   overflow: auto;
   scroll-behavior: smooth;
 }
@@ -18,5 +18,5 @@
 
 .snappy > div {
   scroll-snap-align: center;
-}
+} */
 /* snappy scroll code end */

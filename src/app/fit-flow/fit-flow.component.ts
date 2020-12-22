@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  HostListener,
+  OnInit,
+  Output,
+} from "@angular/core";
 
 @Component({
-  selector: 'app-fit-flow',
-  templateUrl: './fit-flow.component.html',
-  styleUrls: ['./fit-flow.component.css']
+  selector: "app-fit-flow",
+  templateUrl: "./fit-flow.component.html",
+  styleUrls: ["./fit-flow.component.css"],
 })
-export class FitFlowComponent implements OnInit {
+export class FitFlowComponent {
+  @Output() scrollPage = new EventEmitter<string>();
 
-  constructor() { }
-
-  ngOnInit(): void {
+  scrollToPage(selectedPage: string) {
+    this.scrollPage.emit(selectedPage); // this emits the toggle status to parent component so that it can open or close the navigation accordingly.
   }
-
 }

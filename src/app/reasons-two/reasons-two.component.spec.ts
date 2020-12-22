@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FitMenuComponent } from './fit-menu.component';
+import { ReasonsTwoComponent } from './reasons-two.component';
 
-describe('FitMenuComponent', () => {
-  let component: FitMenuComponent;
-  let fixture: ComponentFixture<FitMenuComponent>;
+describe('ReasonsTwoComponent', () => {
+  let component: ReasonsTwoComponent;
+  let fixture: ComponentFixture<ReasonsTwoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FitMenuComponent ]
+      declarations: [ ReasonsTwoComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FitMenuComponent);
+    fixture = TestBed.createComponent(ReasonsTwoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
