@@ -1,12 +1,22 @@
 <div class="bg-light-gray">
   <div class="container page-height">
     <div class="row">
-      <div class="col-12 mt-5">
+      <div class="col-7 mt-5">
         <h1
-          class="bottom-border d-inline-block ml-1 f-36 mb-4 pb-1 font-weight-bold yellow"
+          [ngClass]="activeCss ? 'animate__animated animate__fadeInUp' : ''"
+          class="d-inline-block ml-1 f-36 pb-1 font-weight-bold yellow"
         >
           Why FitBox?
         </h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-7 mb-4">
+        <div
+          *ngIf="lineCss"
+          [ngClass]="lineCss ? 'animate__animated animate__fadeInLeft' : ''"
+          class="mr-4 bottom-line"
+        ></div>
       </div>
     </div>
     <div class="row">
@@ -20,7 +30,10 @@
         </div>
       </div>
     </div>
-    <div class="text-center bounce-in-down mt-5">
+    <div
+      (click)="scrollToPage('fitfreedom')"
+      class="text-center bounce-in-down mt-5"
+    >
       <img
         class="bounce-in-down"
         src="../assets/multiple-angle-down.svg"
