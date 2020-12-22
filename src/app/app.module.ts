@@ -19,6 +19,7 @@ import { ContactInfoComponent } from "./contact-info/contact-info.component";
 import { FitMenuComponent } from "./fit-menu/fit-menu.component";
 import { MDBBootstrapModule } from "angular-bootstrap-md";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     FaqComponent,
     ContactInfoComponent,
     FitMenuComponent,
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,
