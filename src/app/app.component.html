@@ -1,4 +1,4 @@
-<div>
+<div class="bg-light-gray">
   <!-- landing page -->
   <div id="carousel">
     <app-carousel (scrollPage)="scrollToPage($event)"></app-carousel>
@@ -49,10 +49,27 @@
   <!-- fit covid ready end -->
   <!-- fit menu card -->
   <div id="fitmenu">
-    <app-menu-one></app-menu-one>
-    <app-menu-two></app-menu-two>
-    <app-menu-three></app-menu-three>
-    <app-menu-four></app-menu-four>
+    <app-fit-menu></app-fit-menu>
   </div>
   <!-- fit menu card end-->
+  <!-- testimonials card -->
+  <div>
+    <app-testimonials></app-testimonials>
+  </div>
+  <!-- testimonials card end-->
+  <!-- app-fit-box-play-store card -->
+  <div>
+    <app-fit-box-play-store></app-fit-box-play-store>
+  </div>
+  <!-- app-fit-box-play-store card end-->
+  <!-- app-faq card -->
+  <div>
+    <app-faq></app-faq>
+  </div>
+  <!-- app-faq card end-->
+  <!-- app-contact-info card -->
+  <div>
+    <app-contact-info></app-contact-info>
+  </div>
+  <!-- app-contact-info card end-->
 </div>
