@@ -1,4 +1,4 @@
-<div class="bg-light-gray">
+<div>
   <!-- landing page -->
   <div id="carousel">
     <app-carousel (scrollPage)="scrollToPage($event)"></app-carousel>
@@ -12,22 +12,50 @@
   <!-- why fitbox ended -->
   <!-- fit freedom  -->
   <div id="fitfreedom">
-    <app-fit-freedom (scrollPage)="scrollToPage($event)"></app-fit-freedom>
+    <app-fit-freedom
+      *ngIf="isMobile"
+      (scrollPage)="scrollToPage($event)"
+    ></app-fit-freedom>
+    <app-fit-freedom-desktop
+      *ngIf="!isMobile"
+      (scrollPage)="scrollToPage($event)"
+    ></app-fit-freedom-desktop>
   </div>
   <!-- fit freedom end -->
   <!-- fit flow -->
   <div id="fitfflow">
-    <app-fit-flow (scrollPage)="scrollToPage($event)"></app-fit-flow>
+    <app-fit-flow
+      *ngIf="isMobile"
+      (scrollPage)="scrollToPage($event)"
+    ></app-fit-flow>
+    <app-fit-flow-desktop
+      *ngIf="!isMobile"
+      (scrollPage)="scrollToPage($event)"
+    ></app-fit-flow-desktop>
   </div>
   <!-- fit flow end -->
   <!-- fit smile -->
   <div id="fitsmile">
-    <app-fit-smile (scrollPage)="scrollToPage($event)"></app-fit-smile>
+    <app-fit-smile
+      *ngIf="isMobile"
+      (scrollPage)="scrollToPage($event)"
+    ></app-fit-smile>
+    <app-fit-smile-desktop
+      *ngIf="!isMobile"
+      (scrollPage)="scrollToPage($event)"
+    ></app-fit-smile-desktop>
   </div>
   <!-- fit smile end -->
   <!-- fit touch -->
   <div id="fittouch">
-    <app-fit-touch (scrollPage)="scrollToPage($event)"></app-fit-touch>
+    <app-fit-touch
+      *ngIf="isMobile"
+      (scrollPage)="scrollToPage($event)"
+    ></app-fit-touch>
+    <app-fit-touch-desktop
+      *ngIf="!isMobile"
+      (scrollPage)="scrollToPage($event)"
+    ></app-fit-touch-desktop>
   </div>
   <!-- fit touch end -->
   <!-- fit box logo -->
@@ -35,6 +63,32 @@
     <app-fit-box-logo></app-fit-box-logo>
   </div>
   <!-- fit box logo end -->
+  <!-- removable content -->
+  <div>
+    <app-fit-freedom-desktop
+      *ngIf="isMobile"
+      (scrollPage)="scrollToPage($event)"
+    ></app-fit-freedom-desktop>
+  </div>
+  <div>
+    <app-fit-flow-desktop
+      *ngIf="isMobile"
+      (scrollPage)="scrollToPage($event)"
+    ></app-fit-flow-desktop>
+  </div>
+  <div>
+    <app-fit-smile-desktop
+      *ngIf="isMobile"
+      (scrollPage)="scrollToPage($event)"
+    ></app-fit-smile-desktop>
+  </div>
+  <div>
+    <app-fit-touch-desktop
+      *ngIf="isMobile"
+      (scrollPage)="scrollToPage($event)"
+    ></app-fit-touch-desktop>
+  </div>
+  <!-- removable content end -->
   <!-- fit box solving problems -->
   <div id="fitboxsolvingproblems">
     <app-fit-box-solving-problems></app-fit-box-solving-problems>
@@ -67,6 +121,11 @@
     <app-faq></app-faq>
   </div>
   <!-- app-faq card end-->
+  <!-- app-gallery card -->
+  <div>
+    <app-gallery></app-gallery>
+  </div>
+  <!-- app-gallery card end-->
   <!-- app-contact-info card -->
   <div>
     <app-contact-info></app-contact-info>

@@ -61,10 +61,82 @@
   opacity: 0.5 !important;
 }
 
+.desktop-start-now {
+  position: absolute;
+  bottom: 200px;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+}
+
 .start-now button {
   font-size: 24px;
   color: black !important;
   font-weight: bold;
   background-color: #fbd530;
   box-shadow: 0 0 20px 5px black;
+}
+
+.join-btn {
+  font-size: 56px;
+  font-weight: 900;
+}
+
+.animate-logo {
+  position: relative;
+  -webkit-animation-name: animatelogo;
+  -webkit-animation-duration: 1s;
+  animation-name: animatelogo;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes animatelogo {
+  from {
+    left: -150px;
+    opacity: 0;
+  }
+  to {
+    left: 0px;
+    opacity: 1;
+  }
+}
+@keyframes animatelogo {
+  from {
+    left: -150px;
+    opacity: 0;
+  }
+  to {
+    left: 0px;
+    opacity: 1;
+  }
+}
+
+.animate-anout {
+  position: relative;
+  -webkit-animation-name: animateanout;
+  -webkit-animation-duration: 1s;
+  animation-name: animateanout;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes animateanout {
+  from {
+    right: -150px;
+    opacity: 0;
+  }
+  to {
+    right: 0px;
+    opacity: 1;
+  }
+}
+@keyframes animateanout {
+  from {
+    right: -150px;
+    opacity: 0;
+  }
+  to {
+    right: 0px;
+    opacity: 1;
+  }
 }

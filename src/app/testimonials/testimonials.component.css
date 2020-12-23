@@ -9,9 +9,3 @@ img {
   width: 10px !important;
   height: 10px !important;
 }
-
-.bottom-line {
-  display: block;
-  height: 1px;
-  border-top: 2px solid white;
-}

@@ -1,28 +1,49 @@
-<div class="bg-light-gray">
-  <div class="container page-height">
+<div class="bg-page">
+  <div class="container mb-4 page-height">
     <div class="row">
-      <div class="col-9 mt-5">
-        <div class="top-line"></div>
+      <div class="col-12 fitlogo">
+        <div
+          *ngIf="isLineActive"
+          [ngClass]="isLineActive ? 'left-to-right' : ''"
+          class="top-line"
+        ></div>
       </div>
-      <div class="col-3"></div>
       <div class="col-12">
         <div class="text-center">
           <img
-            src="../../assets/fitBoxYellow.svg"
+            src="../../assets/largeFitBox.png"
             class="img-fluid"
             alt="Responsive image"
           />
         </div>
-        <div class="text-light text-right logo-sub-content mt-3 d-inline-block">
-          <span class="mr-2">Fit Features</span>
-          <span>Fit Features</span>
+        <div
+          class="text-light logo-sub-content mt-3 text-yellow d-inline-block"
+        >
+          <span class="f-22 font-weight-bold text-yellow mr-4"
+            >Fit Features</span
+          >
+          <i
+            class="fa fa-angle-right text-yellow next-animate-1"
+            aria-hidden="true"
+          ></i>
+          <i
+            class="fa fa-angle-right text-yellow next-animate-2"
+            aria-hidden="true"
+          ></i>
+          <i
+            class="fa fa-angle-right text-yellow next-animate-3"
+            aria-hidden="true"
+          ></i>
         </div>
       </div>
     </div>
     <div class="row">
-      <div class="col-3"></div>
-      <div class="col-9">
-        <div class="bottom-line"></div>
+      <div class="col-12">
+        <div
+          *ngIf="isLineActive"
+          [ngClass]="isLineActive ? 'right-to-left' : ''"
+          class="bottom-line"
+        ></div>
       </div>
     </div>
   </div>

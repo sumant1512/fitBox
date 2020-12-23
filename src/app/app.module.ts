@@ -19,7 +19,12 @@ import { ContactInfoComponent } from "./contact-info/contact-info.component";
 import { FitMenuComponent } from "./fit-menu/fit-menu.component";
 import { MDBBootstrapModule } from "angular-bootstrap-md";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { GalleryComponent } from './gallery/gallery.component';
+import { GalleryComponent } from "./gallery/gallery.component";
+import { CommonModule } from "@angular/common";
+import { FitTouchDesktopComponent } from "./fit-touch-desktop/fit-touch-desktop.component";
+import { FitSmileDesktopComponent } from "./fit-smile-desktop/fit-smile-desktop.component";
+import { FitFlowDesktopComponent } from './fit-flow-desktop/fit-flow-desktop.component';
+import { FitFreedomDesktopComponent } from './fit-freedom-desktop/fit-freedom-desktop.component';
 
 @NgModule({
   declarations: [
@@ -39,10 +44,15 @@ import { GalleryComponent } from './gallery/gallery.component';
     ContactInfoComponent,
     FitMenuComponent,
     GalleryComponent,
+    FitTouchDesktopComponent,
+    FitSmileDesktopComponent,
+    FitFlowDesktopComponent,
+    FitFreedomDesktopComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonModule,
     MDBBootstrapModule.forRoot(),
     BrowserAnimationsModule,
   ],

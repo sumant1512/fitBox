@@ -1,0 +1,25 @@
+.modalSize {
+  min-width: 50%;
+  min-height: 50%;
+  margin-top: 100px;
+}
+
+.fade-scale {
+  transform: scale(0);
+  opacity: 0;
+  -webkit-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+
+.fade-scale.in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.close-btn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 9;
+}

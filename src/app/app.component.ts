@@ -18,16 +18,18 @@ export class AppComponent implements OnInit {
     "fitsmile",
     "fittouch",
     "fitboxlogo",
-    "fitboxsolvingproblems",
-    "fitboxcovidready",
-    "fitmenu",
   ];
   selectedIndex = 0;
   selectedPage = this.pages[this.selectedIndex];
   isTouchActive = true;
+  isMobile: boolean;
   constructor(private viewPortScroller: ViewportScroller) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    if (window.innerWidth < 768) {
+      this.isMobile = true;
+    }
+  }
 
   defaultTouch = { x: 0, y: 0, time: 0 };
 
@@ -53,13 +55,13 @@ export class AppComponent implements OnInit {
             if (this.selectedIndex !== 0) {
               this.selectedIndex = this.selectedIndex - 1;
               this.selectedPage = this.pages[this.selectedIndex];
-              this.scrollToPage(this.selectedPage);
+              // this.scrollToPage(this.selectedPage);
             }
           } else {
-            if (this.selectedIndex < 9) {
+            if (this.selectedIndex < 6) {
               this.selectedIndex = this.selectedIndex + 1;
               this.selectedPage = this.pages[this.selectedIndex];
-              this.scrollToPage(this.selectedPage);
+              // this.scrollToPage(this.selectedPage);
             }
           }
         }
@@ -69,12 +71,20 @@ export class AppComponent implements OnInit {
 
   @HostListener("window:scroll", [])
   onWindowScroll() {
-    if (window.pageYOffset > 6500) {
+    if (window.pageYOffset > 3800) {
       this.isTouchActive = false;
     } else {
       this.isTouchActive = true;
     }
     //we'll do some stuff here when the window is scrolled
+  }
+
+  @HostListener("window:resize", ["$event"])
+  onResize(event) {
+    console.log(window.pageYOffset);
+    if (event.target.innerWidth < 768) {
+      this.isMobile = true;
+    }
   }
 
   scrollToPage(selectedPage: string) {

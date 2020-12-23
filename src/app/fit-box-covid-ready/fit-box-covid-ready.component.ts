@@ -1,4 +1,12 @@
-import { Component, EventEmitter, OnInit, Output } from "@angular/core";
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  HostListener,
+  OnInit,
+  Output,
+} from "@angular/core";
+import { isInViewport } from "../view-port-check";
 
 @Component({
   selector: "app-fit-box-covid-ready",
@@ -7,10 +15,23 @@ import { Component, EventEmitter, OnInit, Output } from "@angular/core";
 })
 export class FitBoxCovidReadyComponent implements OnInit {
   @Output() scrollPage = new EventEmitter<string>();
+  isAnimationActive = false;
+  isLineActive = false;
+  constructor(public el: ElementRef) {}
 
-  constructor() {}
+  ngOnInit() {}
 
-  ngOnInit(): void {}
+  @HostListener("window:scroll", ["$event"])
+  checkScroll() {
+    const covidready = document.querySelector(".covidready");
+    const isContentActive = isInViewport(covidready) ? true : false;
+    if (isContentActive) {
+      this.isAnimationActive = true;
+      setTimeout(() => {
+        this.isLineActive = true;
+      }, 300);
+    }
+  }
 
   scrollToPage(selectedPage: string) {
     this.scrollPage.emit(selectedPage); // this emits the toggle status to parent component so that it can open or close the navigation accordingly.

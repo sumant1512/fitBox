@@ -1,11 +1,18 @@
-<div class="bg-light-gray">
-  <div class="container page-height">
+<div class="bg-page">
+  <div class="container mb-4 page-height">
     <div class="row">
-      <div class="text-center col-12 mt-5">
+      <div class="col-12 covidready">
         <h1
-          class="btm-border-1px d-inline-block ml-1 f-36 mb-4 pb-1 font-weight-bold text-yellow"
+          *ngIf="isAnimationActive"
+          [ngClass]="isAnimationActive ? 'bottom-to-top' : ''"
+          class="mt-md-5 mb-4 mt-4 d-inline-block font-weight-bold light-yellow"
         >
-          We are CoVID Ready!
+          <span>We are CoVID Ready!</span>
+          <div
+            *ngIf="isLineActive"
+            [ngClass]="isLineActive ? 'left-to-right' : ''"
+            class="bottom-line"
+          ></div>
         </h1>
       </div>
     </div>
@@ -18,11 +25,6 @@
             Your browser does not support HTML video.
           </video>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-12 px-5 mt-4">
-        <div class="bottom-line"></div>
       </div>
     </div>
     <div
