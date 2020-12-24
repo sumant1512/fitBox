@@ -1,8 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-  background-color: #2e2e2e;
+  background-color: #222222;
 }
 .bg-page {
+  background-color: #000000;
+}
+.input-border {
+  border: 1px solid #fbd530;
+}
+.bg-body {
   background-color: #222222;
 }
 .carousel-height {
@@ -38,7 +44,7 @@ body {
 }
 .text-stroke {
   color: transparent;
-  -webkit-text-stroke: 3px #e3c133;
+  -webkit-text-stroke: 2px #e3c133;
 }
 .fit-pay-image {
   border-top: 20px solid #362b00;
@@ -137,6 +143,37 @@ html {
   }
   to {
     bottom: 0;
+    opacity: 1;
+  }
+}
+
+/* top to bottom */
+
+.top-to-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 0.5s;
+  animation-name: animatebottom;
+  animation-duration: 0.5s;
+}
+
+@-webkit-keyframes animatebottom {
+  from {
+    top: -100px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
+@keyframes animatebottom {
+  from {
+    top: -100px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
     opacity: 1;
   }
 }
