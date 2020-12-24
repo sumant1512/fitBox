@@ -1,22 +1,28 @@
-/* snappy scroll code start */
-/* .snappy {
-  overflow: auto;
-  scroll-behavior: smooth;
+/* animate right to left */
+
+.swipe-next-card {
+  position: relative;
+  -webkit-animation-name: swipeleft;
+  -webkit-animation-duration: 1s;
+  animation-name: swipeleft;
+  animation-duration: 1s;
 }
 
-.snappy.y {
-  width: 100%;
-  height: 100vh;
+@-webkit-keyframes swipeleft {
+  from {
+    right: -150px;
+    opacity: 0;
+  }
+  to {
+    right: 0px;
+    opacity: 1;
+  }
 }
-.y.mandatory-scroll-snapping {
-  scroll-snap-type: y mandatory;
+@keyframes swipeleft {
+  0% {
+    right: 0vh;
+  }
+  100% {
+    right: 200vh;
+  }
 }
-
-.y.proximity-scroll-snapping {
-  scroll-snap-type: y proximity;
-}
-
-.snappy > div {
-  scroll-snap-align: center;
-} */
-/* snappy scroll code end */

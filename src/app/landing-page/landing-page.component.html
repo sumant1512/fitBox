@@ -60,7 +60,9 @@
   <!-- fit touch end -->
   <!-- fit box logo -->
   <div id="fitboxlogo">
-    <app-fit-box-logo></app-fit-box-logo>
+    <div id="logo">
+      <app-fit-box-logo (next)="swipeCard($event)"></app-fit-box-logo>
+    </div>
   </div>
   <!-- fit box logo end -->
   <!-- removable content -->

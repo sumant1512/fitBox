@@ -29,7 +29,7 @@ export class LandingPageComponent implements OnInit {
       this.isMobile = true;
     }
   }
-
+  // this is for one tap scroll
   defaultTouch = { x: 0, y: 0, time: 0 };
 
   @HostListener("touchstart", ["$event"])
@@ -67,7 +67,7 @@ export class LandingPageComponent implements OnInit {
       }
     }
   }
-
+  // this is for one tap scroll
   @HostListener("window:scroll", [])
   onWindowScroll() {
     if (window.pageYOffset > 3800) {
@@ -84,8 +84,13 @@ export class LandingPageComponent implements OnInit {
       this.isMobile = true;
     }
   }
-
+  // this is for one tap scroll
   scrollToPage(selectedPage: string) {
     this.viewPortScroller.scrollToAnchor(selectedPage);
+  }
+
+  // for swiping next card
+  swipeCard(nextCard) {
+    document.getElementById("logo").classList.add("swipe-next-card");
   }
 }

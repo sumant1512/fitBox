@@ -1,4 +1,11 @@
-import { Component, ElementRef, HostListener, OnInit } from "@angular/core";
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  HostListener,
+  OnInit,
+  Output,
+} from "@angular/core";
 import { isInViewport } from "../view-port-check";
 
 @Component({
@@ -7,6 +14,7 @@ import { isInViewport } from "../view-port-check";
   styleUrls: ["./fit-box-logo.component.css"],
 })
 export class FitBoxLogoComponent implements OnInit {
+  @Output() next = new EventEmitter<string>();
   isAnimationActive = false;
   isLineActive = false;
   constructor(public el: ElementRef) {}
@@ -23,5 +31,9 @@ export class FitBoxLogoComponent implements OnInit {
         this.isLineActive = true;
       }, 300);
     }
+  }
+
+  cardOne() {
+    this.next.emit("cardOne");
   }
 }
