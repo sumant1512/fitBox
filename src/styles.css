@@ -1,4 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #2e2e2e;
+}
+.bg-page {
+  background-color: #222222;
+}
 .carousel-height {
   height: 100vh;
 }
@@ -20,6 +26,9 @@
 .top-250 {
   top: 250px;
 }
+.lh-64 {
+  line-height: 64px;
+}
 .fit-number {
   font-family: system-ui;
   font-size: 64px;
@@ -40,16 +49,10 @@
 }
 
 .btm-border-1px {
-  border-bottom: 1px solid #BABABA;
+  border-bottom: 1px solid #bababa;
 }
 .mt-15-vh {
   margin-top: 20vh;
-}
-.bg-light-gray {
-  background-color: #171819;
-}
-.bg-dark-gray {
-  background-color: #292929;
 }
 .text-yellow {
   color: #ffcf00;
@@ -66,7 +69,7 @@ html {
 .bottom-line {
   display: block;
   height: 1px;
-  border-top: 2px solid white;
+  border-top: 0.5px solid #b2b2b2;
 }
 .carousel-icon {
   border-radius: 50%;
@@ -108,6 +111,268 @@ html {
     transform: translateY(0px);
   }
 }
+
+.bottom-to-top {
+  position: relative;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.5s;
+  animation-name: animatetop;
+  animation-duration: 0.5s;
+}
+
+@-webkit-keyframes animatetop {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+@keyframes animatetop {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+/* line left to right */
+
+.left-to-right {
+  position: relative;
+  -webkit-animation-name: animateright;
+  -webkit-animation-duration: 0.5s;
+  animation-name: animateright;
+  animation-duration: 0.5s;
+}
+
+@-webkit-keyframes animateright {
+  from {
+    left: -150px;
+    opacity: 0;
+  }
+  to {
+    left: 0px;
+    opacity: 1;
+  }
+}
+@keyframes animateright {
+  from {
+    left: -150px;
+    opacity: 0;
+  }
+  to {
+    left: 0px;
+    opacity: 1;
+  }
+}
+
+/* animate right to left */
+
+.right-to-left {
+  position: relative;
+  -webkit-animation-name: animateleft;
+  -webkit-animation-duration: 1s;
+  animation-name: animateleft;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes animateleft {
+  from {
+    right: -150px;
+    opacity: 0;
+  }
+  to {
+    right: 0px;
+    opacity: 1;
+  }
+}
+@keyframes animateleft {
+  from {
+    right: -150px;
+    opacity: 0;
+  }
+  to {
+    right: 0px;
+    opacity: 1;
+  }
+}
+
+/* animate bottom to top */
+
+.bottom-to-top-max {
+  position: relative;
+  -webkit-animation-name: animatetopmax;
+  -webkit-animation-duration: 0.5s;
+  animation-name: animatetopmax;
+  animation-duration: 0.5s;
+}
+
+@-webkit-keyframes animatetopmax {
+  from {
+    bottom: -600px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+@keyframes animatetopmax {
+  from {
+    bottom: -600px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+/* fade in animation */
+
+.fade-in {
+  animation: fadeIn 4s;
+  -webkit-animation: fadeIn ease 4s;
+  -moz-animation: fadeIn ease 4s;
+  -o-animation: fadeIn ease 4s;
+  -ms-animation: fadeIn ease 4s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* angle down animation */
+.next-animate-down-1 {
+  position: relative;
+  animation: nextMoveDownOne 1s ease-in-out infinite;
+}
+
+@-webkit-keyframes nextMoveDownOne {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  70%,
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes nextMoveDownOne {
+  0% {
+    transform: translateY(-18px);
+    opacity: 0;
+  }
+  70%,
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.next-animate-down-2 {
+  position: relative;
+  animation: nextMoveDownTwo 1s ease-in-out infinite 0.1s;
+}
+
+@-webkit-keyframes nextMoveDownTwo {
+  0% {
+    transform: translateY(-13px);
+    opacity: 0;
+  }
+  70%,
+  100% {
+    transform: translateY(-5px);
+    opacity: 1;
+  }
+}
+@keyframes nextMoveDownTwo {
+  0% {
+    transform: translateY(-13px);
+    opacity: 0;
+  }
+  70%,
+  100% {
+    transform: translateY(-5px);
+    opacity: 1;
+  }
+}
+
+.next-animate-down-3 {
+  position: relative;
+  animation: nextMoveDownThree 1s ease-in-out infinite 0.2s;
+}
+
+@-webkit-keyframes nextMoveDownThree {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  70%,
+  100% {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+}
+@keyframes nextMoveDownThree {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  70%,
+  100% {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+}
+/* angle down animation end*/
 
 /* bounce down */
 

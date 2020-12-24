@@ -1,1 +1,58 @@
-<p>gallery works!</p>
+<div class="bg-page">
+  <div class="container mb-4">
+    <div class="row">
+      <div class="col-12 gallery">
+        <h1
+          *ngIf="isAnimationActive"
+          [ngClass]="isAnimationActive ? 'bottom-to-top' : ''"
+          class="mt-md-5 mb-4 mt-4 d-inline-block font-weight-bold light-yellow"
+        >
+          <span>Gallery</span>
+          <div
+            *ngIf="isLineActive"
+            [ngClass]="isLineActive ? 'left-to-right' : ''"
+            class="bottom-line"
+          ></div>
+        </h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 col-md-2" *ngFor="let item of images; index as i">
+        <img
+          class="w-100 mb-4"
+          [src]="item.img"
+          data-toggle="modal"
+          data-target="#myModal"
+          (click)="getImg(item)"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="myModal"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modalSize">
+    <div class="modal-content">
+      <div class="modal-body row">
+        <button
+          *ngIf="isCloseActive"
+          [ngClass]="isCloseActive ? 'right-to-left' : ''"
+          type="button"
+          class="close-btn close"
+          data-dismiss="modal"
+        >
+          <i class="fa-2x fa fa-times text-yellow" aria-hidden="true"></i>
+        </button>
+        <div class="col-md-8">
+          <img [src]="userImgShow" class="w-100" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

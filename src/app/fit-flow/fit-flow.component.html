@@ -1,21 +1,29 @@
-<div class="bg-dark-gray">
-  <div class="container page-height">
+<div class="bg-page">
+  <div class="container mb-4 page-height">
     <div class="row">
-      <div class="col-12 col-md-6 col-lg-3 px-0 page-height">
+      <div class="col-12 col-md-6 col-lg-3 px-0 fitflow">
         <div
-          class="wow fadeInUp fit-number text-stroke font-weight-bold px-3 mt-2"
+          *ngIf="isAnimationActive"
+          [ngClass]="isAnimationActive ? 'bottom-to-top' : ''"
+          class="fit-number text-stroke font-weight-bold px-3 mt-2"
         >
           2
         </div>
         <h1
-          class="wow fadeInUp d-inline-block font-weight-bold light-yellow mx-3"
+          *ngIf="isAnimationActive"
+          [ngClass]="isAnimationActive ? 'bottom-to-top' : ''"
+          class="d-inline-block font-weight-bold light-yellow mx-3"
         >
           <span class="text-stroke mr-2">Fit</span>
           <span class="text-light">Flow</span>
         </h1>
         <div class="row mx-0">
           <div class="col-7 mb-4">
-            <div class="wow fadeInLeft mr-5 bottom-line"></div>
+            <div
+              *ngIf="isLineActive"
+              [ngClass]="isLineActive ? 'left-to-right' : ''"
+              class="mr-5 bottom-line"
+            ></div>
           </div>
         </div>
         <div>
@@ -61,15 +69,25 @@
                 <p class="font-weight-bold">Anytime Switch to Fit Pay</p>
               </div>
             </div>
-            <div
-              (click)="scrollToPage('fitsmile')"
-              class="text-center bounce-in-down mt-3"
-            >
-              <img
-                class="bounce-in-down"
-                src="../assets/multiple-angle-down.svg"
-                alt="multiple angle down"
-              />
+            <div (click)="scrollToPage('fitsmile')" class="text-center mt-3">
+              <div>
+                <i
+                  class="fa fa-angle-down text-yellow next-animate-down-1"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <div>
+                <i
+                  class="fa fa-angle-down text-yellow next-animate-down-2"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <div>
+                <i
+                  class="fa fa-angle-down text-yellow next-animate-down-3"
+                  aria-hidden="true"
+                ></i>
+              </div>
             </div>
           </div>
         </div>
