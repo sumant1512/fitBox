@@ -25,6 +25,11 @@ import { FitTouchDesktopComponent } from "./fit-touch-desktop/fit-touch-desktop.
 import { FitSmileDesktopComponent } from "./fit-smile-desktop/fit-smile-desktop.component";
 import { FitFlowDesktopComponent } from './fit-flow-desktop/fit-flow-desktop.component';
 import { FitFreedomDesktopComponent } from './fit-freedom-desktop/fit-freedom-desktop.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { AboutComponent } from './about/about.component';
+import { HeaderComponent } from './header/header.component';
+import { FitFounderComponent } from './fit-founder/fit-founder.component';
+import { CareersComponent } from './careers/careers.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +53,11 @@ import { FitFreedomDesktopComponent } from './fit-freedom-desktop/fit-freedom-de
     FitSmileDesktopComponent,
     FitFlowDesktopComponent,
     FitFreedomDesktopComponent,
+    LandingPageComponent,
+    AboutComponent,
+    HeaderComponent,
+    FitFounderComponent,
+    CareersComponent,
   ],
   imports: [
     BrowserModule,

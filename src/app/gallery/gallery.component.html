@@ -19,7 +19,7 @@
     <div class="row">
       <div class="col-4 col-md-2" *ngFor="let item of images; index as i">
         <img
-          class="w-100 mb-4"
+          class="gallery-image w-100 mb-4"
           [src]="item.img"
           data-toggle="modal"
           data-target="#myModal"
@@ -42,7 +42,7 @@
       <div class="modal-body row">
         <button
           *ngIf="isCloseActive"
-          [ngClass]="isCloseActive ? 'right-to-left' : ''"
+          [ngClass]="isCloseActive ? 'top-to-bottom' : ''"
           type="button"
           class="close-btn close"
           data-dismiss="modal"

@@ -48,12 +48,14 @@
     </div>
     <div class="d-none desktop-start-now d-md-block m-4 p-4 text-center">
       <h1
+        *ngIf="lineOne"
         [ngClass]="lineOne ? 'left-to-right' : ''"
         class="font-weight-bold text-left"
       >
         If you want your new year to be
       </h1>
       <h1
+        *ngIf="lineTwo"
         [ngClass]="lineTwo ? 'left-to-right' : ''"
         class="font-weight-bold text-left"
       >
@@ -61,6 +63,7 @@
       </h1>
       <div class="d-inline-block float-left">
         <h1
+          *ngIf="lineThree"
           [ngClass]="lineThree ? 'bottom-to-top' : ''"
           class="text-dark font-weight-bold text-left"
           (click)="scrollToPage('whyfitbox')"
@@ -68,7 +71,8 @@
           Join FITBOX
         </h1>
         <div
-          [ngClass]="lineThree ? 'left-to-right' : ''"
+          *ngIf="lineFour"
+          [ngClass]="lineFour ? 'left-to-right' : ''"
           class="bottom-line"
         ></div>
       </div>
@@ -81,10 +85,30 @@
       />
     </div>
     <div class="about d-block d-md-none">
-      <h4 class="animate-anout font-weight-bold">About</h4>
+      <h4 (click)="navToggle()" class="animate-anout font-weight-bold">
+        About
+      </h4>
     </div>
     <div class="text-right mt-3 pt-1 mr-3 pr-1 d-none d-md-block">
-      <h2 class="animate-anout font-weight-bold">About</h2>
+      <h2 (click)="navToggle()" class="animate-anout font-weight-bold">
+        About
+      </h2>
+    </div>
+    <div>
+      <div id="sideBar" class="sidenav">
+        <div *ngFor="let route of navList">
+          <span
+            [ngClass]="{
+              'header-animation': !sideNavOpen,
+              'right-to-left': sideNavOpen
+            }"
+            href="javascript:void(0)"
+            (click)="navigateToAbout()"
+            class="text-stroke"
+            >{{ route.navName }}</span
+          >
+        </div>
+      </div>
     </div>
   </div>
 </div>
