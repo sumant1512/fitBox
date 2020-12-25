@@ -1,6 +1,9 @@
 export function isInViewport(element) {
   const rect = element.getBoundingClientRect();
   return (
+    rect.y <= 400 &&
+    rect.y >= 300 &&
+    rect.top >= 0 &&
     rect.top >= 0 &&
     rect.left >= 0 &&
     rect.bottom <=

@@ -9,7 +9,6 @@ import { WhyFitBoxComponent } from "./why-fit-box/why-fit-box.component";
 import { FitFreedomComponent } from "./fit-freedom/fit-freedom.component";
 import { FitFlowComponent } from "./fit-flow/fit-flow.component";
 import { FitSmileComponent } from "./fit-smile/fit-smile.component";
-import { FitTouchComponent } from "./fit-touch/fit-touch.component";
 import { FitBoxSolvingProblemsComponent } from "./fit-box-solving-problems/fit-box-solving-problems.component";
 import { FitBoxCovidReadyComponent } from "./fit-box-covid-ready/fit-box-covid-ready.component";
 import { TestimonialsComponent } from "./testimonials/testimonials.component";
@@ -23,13 +22,14 @@ import { GalleryComponent } from "./gallery/gallery.component";
 import { CommonModule } from "@angular/common";
 import { FitTouchDesktopComponent } from "./fit-touch-desktop/fit-touch-desktop.component";
 import { FitSmileDesktopComponent } from "./fit-smile-desktop/fit-smile-desktop.component";
-import { FitFlowDesktopComponent } from './fit-flow-desktop/fit-flow-desktop.component';
-import { FitFreedomDesktopComponent } from './fit-freedom-desktop/fit-freedom-desktop.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { AboutComponent } from './about/about.component';
-import { HeaderComponent } from './header/header.component';
-import { FitFounderComponent } from './fit-founder/fit-founder.component';
-import { CareersComponent } from './careers/careers.component';
+import { FitFlowDesktopComponent } from "./fit-flow-desktop/fit-flow-desktop.component";
+import { FitFreedomDesktopComponent } from "./fit-freedom-desktop/fit-freedom-desktop.component";
+import { LandingPageComponent } from "./landing-page/landing-page.component";
+import { AboutComponent } from "./about/about.component";
+import { HeaderComponent } from "./header/header.component";
+import { FitFounderComponent } from "./fit-founder/fit-founder.component";
+import { CareersComponent } from "./careers/careers.component";
+import { FitTouchComponent } from "./fit-touch/fit-touch.component";
 
 @NgModule({
   declarations: [
@@ -40,7 +40,6 @@ import { CareersComponent } from './careers/careers.component';
     FitFreedomComponent,
     FitFlowComponent,
     FitSmileComponent,
-    FitTouchComponent,
     FitBoxSolvingProblemsComponent,
     FitBoxCovidReadyComponent,
     TestimonialsComponent,
@@ -58,6 +57,7 @@ import { CareersComponent } from './careers/careers.component';
     HeaderComponent,
     FitFounderComponent,
     CareersComponent,
+    FitTouchComponent,
   ],
   imports: [
     BrowserModule,

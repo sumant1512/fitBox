@@ -1,22 +1,151 @@
-/* snappy scroll code start */
-/* .snappy {
-  overflow: auto;
-  scroll-behavior: smooth;
+/* swipe logo card */
+
+.swipe-logo-card {
+  -webkit-animation-name: swipeLogo;
+  -webkit-animation-duration: 1s;
+  animation-name: swipeLogo;
+  animation-duration: 1s;
+  position: absolute;
 }
 
-.snappy.y {
-  width: 100%;
-  height: 100vh;
+@-webkit-keyframes swipeLogo {
+  from {
+    transform: translate(0px, 0px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-200vh, 0px);
+    opacity: 1;
+  }
 }
-.y.mandatory-scroll-snapping {
-  scroll-snap-type: y mandatory;
+@keyframes swipeLogo {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(-200vh, 0px);
+  }
 }
 
-.y.proximity-scroll-snapping {
-  scroll-snap-type: y proximity;
+.stop-logo-card {
+  transform: translate(-200vh, 0px);
 }
 
-.snappy > div {
-  scroll-snap-align: center;
-} */
-/* snappy scroll code end */
+/* card one call */
+
+.card-one {
+  transform: translate(200vh);
+}
+
+.first-card {
+  display: none;
+  transform: translate(200vh, 0px);
+}
+
+/* first card activate */
+
+.first-card-active {
+  position: static;
+  display: block;
+  -webkit-animation-name: firstCardActive;
+  -webkit-animation-duration: 1s;
+  animation-name: firstCardActive;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes firstCardActive {
+  from {
+    transform: translate(0px, 0px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-200vh, 0px);
+    opacity: 1;
+  }
+}
+@keyframes firstCardActive {
+  0% {
+    transform: translate(200vh, 0px);
+  }
+  100% {
+    transform: translate(0vh, 0px);
+  }
+}
+
+.first-card-stop {
+  transform: translate(0vh, 0px);
+}
+
+/* swipe first card to left */
+
+.swipe-first-card-to-left {
+  -webkit-animation-name: swipeFirstCardToLeft;
+  -webkit-animation-duration: 1s;
+  animation-name: swipeFirstCardToLeft;
+  animation-duration: 1s;
+  position: absolute;
+}
+
+@-webkit-keyframes swipeFirstCardToLeft {
+  from {
+    transform: translate(0px, 0px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-400vh, 0px);
+    opacity: 1;
+  }
+}
+@keyframes swipeFirstCardToLeft {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(-400vh, 0px);
+  }
+}
+
+.swipe-first-card-to-left-Stop {
+  transform: translate(-400vh, 0px);
+}
+
+/* card-two */
+
+.second-card {
+  display: none;
+  transform: translate(400vh, 0px);
+}
+
+/* second card call */
+
+.second-card-active {
+  position: static;
+  display: block;
+  -webkit-animation-name: secondCard;
+  -webkit-animation-duration: 1s;
+  animation-name: secondCardActivate;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes secondCardActivate {
+  from {
+    transform: translate(400vh, 0px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(200vh, 0px);
+    opacity: 1;
+  }
+}
+@keyframes secondCardActivate {
+  0% {
+    transform: translate(400vh, 0px);
+  }
+  100% {
+    transform: translate(200vh, 0px);
+  }
+}
+
+.second-card-stop {
+  transform: translate(200vh, 0px);
+}

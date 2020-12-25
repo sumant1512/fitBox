@@ -1,13 +1,12 @@
 <div class="bg-page">
-  <div class="container mb-4">
+  <div class="container mb-4 page-height">
     <div class="row">
       <div class="col-12 col-md-9 my-md-5">
         <div class="row fitsmiledesktop">
           <div class="col-4">
             <div
-              *ngIf="isAnimationActive"
-              [ngClass]="isAnimationActive ? 'bottom-to-top' : ''"
-              class="number-fit mr-4 pr-1 lh-64 text-right text-stroke font-weight-bold"
+              [ngClass]="isAnimationActive ? 'bottom-to-top text-stroke' : ''"
+              class="number-fit mr-4 pr-1 lh-64 text-right font-weight-bold text-black"
             >
               {{ fitCardData.number }}
             </div>

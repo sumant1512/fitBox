@@ -3,8 +3,7 @@
     <div class="row">
       <div class="col-12 fitlogo">
         <div
-          *ngIf="isLineActive"
-          [ngClass]="isLineActive ? 'left-to-right' : ''"
+          [ngClass]="isLineActive ? 'left-to-right bt' : ''"
           class="top-line"
         ></div>
       </div>
@@ -12,7 +11,7 @@
         <div class="text-center">
           <img
             src="../../assets/largeFitBox.png"
-            class="img-fluid"
+            class="img-fluid fade-in"
             alt="Responsive image"
           />
         </div>
@@ -40,8 +39,7 @@
     <div class="row">
       <div class="col-12">
         <div
-          *ngIf="isLineActive"
-          [ngClass]="isLineActive ? 'right-to-left' : ''"
+          [ngClass]="isLineActive ? 'right-to-left bb' : ''"
           class="bottom-line"
         ></div>
       </div>

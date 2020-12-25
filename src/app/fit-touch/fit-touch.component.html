@@ -1,21 +1,27 @@
 <div class="bg-page">
   <div class="container mb-4 page-height">
     <div class="row">
-      <div class="col-12 fittouch">
+      <div class="col-12 fittouchmobile">
         <div
-          *ngIf="isAnimationActive"
-          [ngClass]="isAnimationActive ? 'bottom-to-top' : ''"
-          class="fit-number text-stroke font-weight-bold px-3 mt-2"
+          [ngClass]="isAnimationActive ? 'bottom-to-top text-stroke' : ''"
+          class="fit-number text-black font-weight-bold px-3 mt-2"
         >
           4
         </div>
         <h1
-          *ngIf="isAnimationActive"
           [ngClass]="isAnimationActive ? 'bottom-to-top' : ''"
-          class="d-inline-block font-weight-bold light-yellow"
+          class="d-inline-block font-weight-bold"
         >
-          <span class="text-stroke mr-2">Fit</span>
-          <span class="text-light">Touch</span>
+          <span
+            [ngClass]="isAnimationActive ? 'bottom-to-top text-stroke' : ''"
+            class="text-black mr-2"
+            >Fit</span
+          >
+          <span
+            [ngClass]="isAnimationActive ? 'bottom-to-top text-light' : ''"
+            class="text-black"
+            >Touch</span
+          >
           <div
             *ngIf="isLineActive"
             [ngClass]="isLineActive ? 'left-to-right' : ''"
@@ -25,7 +31,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-12 col-md-6 col-lg-3 px-0 fittouch">
+      <div class="col-12 col-md-6 col-lg-3 px-0">
         <div>
           <img
             class="w-100 mt-4"
@@ -69,7 +75,7 @@
                 <p class="font-weight-bold">Anytime Switch to Fit Pay</p>
               </div>
             </div>
-            <div (click)="scrollToPage('fitboxlogo')" class="text-center mt-3">
+            <div (click)="scrollToPage('fittouch')" class="text-center mt-3">
               <div>
                 <i
                   class="fa fa-angle-down text-yellow next-animate-down-1"

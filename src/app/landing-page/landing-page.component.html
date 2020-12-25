@@ -60,7 +60,14 @@
   <!-- fit touch end -->
   <!-- fit box logo -->
   <div id="fitboxlogo">
-    <app-fit-box-logo></app-fit-box-logo>
+    <div id="logo">
+      <app-fit-box-logo (next)="swipeCard($event)"></app-fit-box-logo>
+    </div>
+    <!-- <div id="cardOne" class="first-card">
+      <app-fit-freedom-desktop
+        (next)="firstCardSwipe($event)"
+      ></app-fit-freedom-desktop>
+    </div> -->
   </div>
   <!-- fit box logo end -->
   <!-- removable content -->

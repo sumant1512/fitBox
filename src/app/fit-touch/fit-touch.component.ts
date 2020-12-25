@@ -1,6 +1,6 @@
-import { ElementRef } from "@angular/core";
 import {
   Component,
+  ElementRef,
   EventEmitter,
   HostListener,
   OnInit,
@@ -23,8 +23,8 @@ export class FitTouchComponent implements OnInit {
 
   @HostListener("window:scroll", ["$event"])
   checkScroll() {
-    const fittouch = document.querySelector(".fittouch");
-    const isContentActive = isInViewport(fittouch) ? true : false;
+    const fittouchmobile = document.querySelector(".fittouchmobile");
+    const isContentActive = isInViewport(fittouchmobile) ? true : false;
     if (isContentActive) {
       this.isAnimationActive = true;
       setTimeout(() => {
