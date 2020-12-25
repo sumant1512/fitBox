@@ -3,19 +3,27 @@
     <div class="row">
       <div class="col-12 fitsmile">
         <div
-          *ngIf="isAnimationActive"
-          [ngClass]="isAnimationActive ? 'bottom-to-top' : ''"
-          class="fit-number text-stroke font-weight-bold px-3 mt-2"
+          [ngClass]="isAnimationActive ? 'bottom-to-top text-stroke' : ''"
+          class="fit-number text-black font-weight-bold px-3 mt-2"
         >
           3
         </div>
         <h1
-          *ngIf="isAnimationActive"
           [ngClass]="isAnimationActive ? 'bottom-to-top' : ''"
-          class="d-inline-block font-weight-bold light-yellow"
+          class="d-inline-block font-weight-bold"
         >
-          <span class="text-stroke mr-2">Fit</span>
-          <span class="text-light">Smile</span>
+          <span
+            [ngClass]="
+              isAnimationActive ? 'bottom-to-top text-stroke' : ''
+            "
+            class="text-black mr-2"
+            >Fit</span
+          >
+          <span
+            [ngClass]="isAnimationActive ? 'bottom-to-top text-light' : ''"
+            class="text-black"
+            >Smile</span
+          >
           <div
             *ngIf="isLineActive"
             [ngClass]="isLineActive ? 'left-to-right' : ''"

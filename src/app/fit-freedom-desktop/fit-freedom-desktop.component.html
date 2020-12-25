@@ -3,9 +3,8 @@
     <div class="row">
       <div class="col-12 fitfreedomdesktop">
         <h1
-          *ngIf="isAnimationActive"
-          [ngClass]="isAnimationActive ? 'bottom-to-top' : ''"
-          class="mt-md-5 mb-4 mt-4 d-inline-block font-weight-bold light-yellow"
+          [ngClass]="isAnimationActive ? 'bottom-to-top text-yellow' : ''"
+          class="mt-md-5 mb-4 mt-4 d-inline-block font-weight-bold text-black"
         >
           <span>4 Reasons to Join FitBox</span>
           <div
@@ -84,6 +83,9 @@
               <p>{{ fit.data }}</p>
             </div>
           </div>
+        </div>
+        <div>
+          <button type="submit" class="btn" (click) = "cardTwo()">call fit flow</button>
         </div>
       </div>
     </div>

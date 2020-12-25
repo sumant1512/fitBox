@@ -3,12 +3,19 @@
     <div class="row">
       <div class="col-12 fitmenu">
         <h1
-          *ngIf="isAnimationActive"
           [ngClass]="isAnimationActive ? 'bottom-to-top' : ''"
-          class="mt-md-5 mt-4 ml-lg-4 mb-md-3 d-inline-block font-weight-bold light-yellow"
+          class="mt-md-5 mt-4 ml-lg-4 mb-md-3 d-inline-block font-weight-bold"
         >
-          <span class="text-stroke mr-2">Fit</span>
-          <span class="text-light">Menu</span>
+          <span
+            [ngClass]="isAnimationActive ? 'text-stroke' : ''"
+            class="text-black mr-2"
+            >Fit</span
+          >
+          <span
+            [ngClass]="isAnimationActive ? 'text-light' : ''"
+            class="text-black"
+            >Menu</span
+          >
           <div
             *ngIf="isLineActive"
             [ngClass]="isLineActive ? 'left-to-right' : ''"

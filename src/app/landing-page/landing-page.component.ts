@@ -88,4 +88,37 @@ export class LandingPageComponent implements OnInit {
   scrollToPage(selectedPage: string) {
     this.viewPortScroller.scrollToAnchor(selectedPage);
   }
+
+  // for swiping next card
+  swipeCard(nextCard) {
+    document.getElementById("logo").classList.add("swipe-logo-card");
+    this.fitFlowActive();
+    setTimeout(() => {
+      document.getElementById("logo").classList.add("stop-logo-card");
+    }, 1000);
+  }
+
+  fitFlowActive() {
+    document.getElementById("cardOne").classList.add("first-card-active");
+    setTimeout(() => {
+      document.getElementById("cardOne").classList.add("first-card-stop");
+    }, 1000);
+  }
+
+  firstCardSwipe(nextCard) {
+    document.getElementById("logo").classList.add("swipe-first-card-to-left");
+    this.secondCardActive();
+    setTimeout(() => {
+      document
+        .getElementById("logo")
+        .classList.add("swipe-first-card-to-left-Stop");
+    }, 1000);
+  }
+
+  secondCardActive() {
+    document.getElementById("cardTwo").classList.add("second-card-active");
+    setTimeout(() => {
+      document.getElementById("cardTwo").classList.add("second-card-stop");
+    }, 1000);
+  }
 }

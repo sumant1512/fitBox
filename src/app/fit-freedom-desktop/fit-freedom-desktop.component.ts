@@ -1,4 +1,11 @@
-import { Component, ElementRef, HostListener, OnInit } from "@angular/core";
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  HostListener,
+  OnInit,
+  Output,
+} from "@angular/core";
 import { isInViewport } from "../view-port-check";
 
 @Component({
@@ -7,6 +14,7 @@ import { isInViewport } from "../view-port-check";
   styleUrls: ["./fit-freedom-desktop.component.css"],
 })
 export class FitFreedomDesktopComponent implements OnInit {
+  @Output() next = new EventEmitter<string>();
   fitCardData = {
     number: 1,
     strokeHead: "Fit",
@@ -44,5 +52,9 @@ export class FitFreedomDesktopComponent implements OnInit {
         this.isLineActive = true;
       }, 300);
     }
+  }
+
+  cardTwo() {
+    this.next.emit("cardTwo");
   }
 }

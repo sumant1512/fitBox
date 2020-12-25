@@ -46,6 +46,9 @@ body {
   color: transparent;
   -webkit-text-stroke: 2px #e3c133;
 }
+.text-black{
+  color: #000000;
+}
 .fit-pay-image {
   border-top: 20px solid #362b00;
   height: 368px;

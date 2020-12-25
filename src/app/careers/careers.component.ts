@@ -1,5 +1,4 @@
 import { Component, ElementRef, HostListener, OnInit } from "@angular/core";
-import { isInViewport } from "../view-port-check";
 
 @Component({
   selector: "app-careers",
@@ -16,7 +15,7 @@ export class CareersComponent implements OnInit {
   @HostListener("window:scroll", ["$event"])
   checkScroll() {
     const careers = document.querySelector(".careers");
-    const isContentActive = isInViewport(careers) ? true : false;
+    const isContentActive = this.isInViewport(careers) ? true : false;
     if (isContentActive) {
       this.isAnimationActive = true;
       setTimeout(() => {
@@ -24,4 +23,17 @@ export class CareersComponent implements OnInit {
       }, 300);
     }
   }
+
+  isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+  
 }
